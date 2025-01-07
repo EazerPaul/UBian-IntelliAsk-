@@ -1,0 +1,308 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #800000;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #800000;
+    color: white;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 75px;
+    margin-right: 1rem;
+}
+
+/* Date-Time Styles */
+.date-time {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Main Content with Two Sections */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+    height: auto;
+}
+
+/* Left Section (2/3 width) */
+.left-section {
+    flex: 2;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1rem;
+}
+
+/* Right Section (1/3 width for IntelliAsk) */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+/* IntelliAsk Section */
+#intelliask {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 110px); /* Adjusted height to fit within view */
+    padding: 1rem;
+}
+
+/* Chatbox */
+.chatbox {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.message-history {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Chat Input */
+.chat-input-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chat-send {
+    padding: 0.5rem 1rem;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-send:hover {
+    background-color: #a00000;
+}
+
+/* Panels */
+.panel {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.panel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Panel Overlay */
+.panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Panel Text */
+.panel h2, .panel p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+/* Background Images for Panels */
+#updates {
+    background-image: url('assets/images/updates-bg.jpg');
+}
+
+#map {
+    background-image: url('assets/images/map-bg.jpg');
+}
+
+#programs {
+    background-image: url('assets/images/programs-bg.jpg');
+}
+
+#about {
+    background-image: url('assets/images/about-bg.jpg');
+}
+
+/* Announcements Panel */
+#announcements {
+    width: 100%;
+    background-color: #800000;
+    color: white;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Scrolling Announcements */
+#announcements .scroll-container {
+    display: flex;
+    align-items: center;
+    animation: scroll 15s linear infinite;
+    position: absolute;
+    white-space: nowrap;
+}
+
+#announcements .scroll-container img {
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#announcements .scroll-container p {
+    font-size: 1rem;
+    margin: 0 30px;
+}
+
+/* Scrolling Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #800000;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footer-left {
+    flex: 1;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.footer-center {
+    flex: 1;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 0.5;
+}
+
+.footer-right {
+    flex: 1;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: right;
+    display: flex;
+    line-height: 0.5;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.feedback-button {
+    background-color: #FFD700;
+    border: none;
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-button:hover {
+    background-color: #FFC107;
+}
+
+.footer-email a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-email a:hover {
+    text-decoration: underline;
+}
+
+/* Fix Blank Space Below Footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
