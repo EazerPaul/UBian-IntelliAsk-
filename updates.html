@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="stylesheet" href="assets/updates.css">
+    <link rel="stylesheet" href="assets/shared-header-footer.css">
+</head>
+<body data-page="updates">
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo and Title Section -->
+        <div class="logo-title">
+            <img src="assets/images/ublc_logo.png" alt="University Logo" class="logo">
+        </div>
+    
+        <!-- Title in the Center -->
+        <h1 class="header-title">UBian IntelliAsk</h1>
+    
+        <!-- Date-Time and Buttons Section -->
+        <div>
+            <div class="date-time" id="date-time"></div>
+            <div class="info-buttons">
+                <button class="info-button" id="info-button">i</button>
+                <button class="close-button" onclick="location.href='index.html';">X</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="scrollable-panels">
+            <div class="panel" id="news-panel">
+                <h2>News</h2>
+                <img src="assets/images/news-placeholder.jpg" alt="News Placeholder">
+                <ul>
+                    <li>News 1</li>
+                    <li>News 2</li>
+                    <li>News 3</li>
+                </ul>
+            </div>
+            <div class="panel" id="events-panel">
+                <h2>Events</h2>
+                <img src="assets/images/events-placeholder.jpg" alt="Events Placeholder">
+                <ul>
+                    <li>Event 1</li>
+                    <li>Event 2</li>
+                    <li>Event 3</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating IntelliAsk Button -->
+    <div class="floating-chatbot">
+        <button id="chatbot-toggle">🤖</button>
+        <div id="chatbot-panel">
+            <div class="chatbox">
+                <div class="message-history">
+                    <p><strong>Bot:</strong> How can I help you?</p>
+                </div>
+                <form class="chat-input-form">
+                    <input type="text" placeholder="Type your message..." class="chat-input">
+                    <button type="submit" class="chat-send">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="footer-title">College of Engineering and Architecture</p>
+            </div>
+            <div class="footer-center">
+                <p>Gov. Feliciano Leviste Road, Lipa City, Philippines</p>
+                <p>Contact: +63 43 706 - 0041</p>
+            </div>
+            <div class="footer-right">
+                <button class="feedback-button">Submit Feedback</button>
+                <p class="footer-email"><a href="mailto:1420489@ub.edu.ph">Email: 1420489@ub.edu.ph</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Update date and time dynamically
+        const updateDateTime = () => {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+            };
+            document.getElementById('date-time').textContent = now.toLocaleString('en-US', options);
+        };
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+    <script src="assets/scripts/shared.js"></script>
+</body>
+</html>

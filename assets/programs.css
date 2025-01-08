@@ -1,0 +1,166 @@
+/* CSS for Programs Page */
+.programs-content {
+    padding: 2rem;
+}
+
+.program-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Program Buttons on Top */
+.program-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.program-buttons button {
+    background-color: #800000;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.program-buttons button.active {
+    background-color: #FFC107; /* Highlight active button */
+    color: #333;
+}
+
+.program-buttons button:hover {
+    background-color: #A00000;
+}
+
+/* Layout for Left Buttons and Info Panel */
+.info-panel {
+    display: flex;
+    gap: 1rem;
+    height: calc(100vh - 200px); /* Ensure panel fills the space */
+}
+
+/* Left Side Vertical Buttons */
+.side-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.side-buttons button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.side-buttons button.active {
+    background-color: #FFC107; /* Highlight active button */
+    color: #333;
+}
+
+.side-buttons button:hover {
+    background-color: #A00000;
+}
+
+/* Placeholder for Information Panel */
+.info-placeholder {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #800000; /* Red color for error or notice messages */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Specific Styles for Programs Page */
+
+/* Floating IntelliAsk Button Position */
+.floating-chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.floating-chatbot button {
+    width: 60px;
+    height: 60px;
+    background-color: #800000;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#chatbot-panel {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+}
+
+#chatbot-panel .chatbox {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Info Button Styles */
+.info-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+}
+
+/* Panel Styling */
+.programs-panel {
+    width: 100%;
+    height: calc(100vh - 150px);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    position: relative;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.program-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.program-buttons button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

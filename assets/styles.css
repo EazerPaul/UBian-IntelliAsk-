@@ -21,14 +21,25 @@ h1, h2 {
     color: white;
 }
 
+/* Logo Styling */
 .logo-title {
     display: flex;
     align-items: center;
+    gap: 1rem; /* Spacing between logo and title */
 }
 
 .logo {
     height: 75px;
-    margin-right: 1rem;
+}
+
+/* Title Styling */
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f9f9f9;
+    margin: 0;
 }
 
 /* Date-Time Styles */
@@ -154,29 +165,42 @@ h1, h2 {
     z-index: 1;
 }
 
-/* Panel Text */
-.panel h2, .panel p {
+/* Title Styling (h2) */
+.panel h2 {
+    color: #E6B800; /* Slightly darker gold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Optional shadow */
+    font-size: 1.5rem; /* Adjust as needed */
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensure it's above overlay */
     margin: 0;
+}
+
+/* Description Styling (p) */
+.panel p {
+    color: rgba(255, 255, 255, 0.75); /* White with 75% opacity */
+    font-size: 1rem; /* Slightly smaller */
+    position: relative;
+    z-index: 2; /* Ensure it's above overlay */
+    margin: 0.5rem 0 0; /* Add spacing below the title */
 }
 
 /* Background Images for Panels */
 #updates {
-    background-image: url('assets/images/updates-bg.jpg');
+    background-image: url('images/updates-bg.jpg');
 }
 
 #map {
-    background-image: url('assets/images/map-bg.jpg');
+    background-image: url('images/map-bg.jpg');
 }
 
 #programs {
-    background-image: url('assets/images/programs-bg.jpg');
+    background-image: url('images/programs-bg.jpg');
 }
 
 #about {
-    background-image: url('assets/images/about-bg.jpg');
+    background-image: url('images/about-bg.jpg');
 }
+
 
 /* Announcements Panel */
 #announcements {
