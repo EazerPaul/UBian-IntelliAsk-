@@ -1,0 +1,43 @@
+
+.map-content {
+    height: calc(100vh - 150px); /* Full height minus header and footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-placeholder {
+    width: 80%;
+    height: 80%;
+    background: #ccc;
+    border: 2px dashed #800000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Specific Styles for Map Page */
+
+
+/* Info Button Styles */
+.info-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+}
+
+/* Placeholder Map Section */
+.map-container {
+    width: 100%;
+    height: calc(100vh - 150px);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    position: relative;
+    margin: 1rem 0;
+    padding: 1rem;
+}

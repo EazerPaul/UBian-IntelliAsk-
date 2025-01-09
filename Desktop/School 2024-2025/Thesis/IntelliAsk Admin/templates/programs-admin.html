@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs</title>
+    <link rel="stylesheet" href="/static/css/programs-admin.css">
+    <link rel="stylesheet" href="/static/css/admin-header-footer.css">
+</head>
+<body data-page="programs">
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo and Title Section -->
+        <div class="logo-title">
+            <img src="/static/images/ublc_logo.png" alt="University Logo" class="logo">
+        </div>
+    
+        <!-- Title in the Center -->
+        <h1 class="header-title">UBian IntelliAsk</h1>
+    
+        <!-- Date-Time and Buttons Section -->
+        <div>
+            <div class="date-time" id="date-time"></div>
+            <div class="info-buttons">
+                <button class="info-button" id="info-button">i</button>
+                <button class="close-button" onclick="location.href='admin.html';">X</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="programs-content">
+        <h1>College of Engineering and Architecture</h1>
+        <h2>Department</h2>
+        <div class="program-panel">
+            <div class="program-buttons">
+                <button id="btn-bsce">BS Computer Engineering</button>
+                <button id="btn-bsie">BS Industrial Engineering</button>
+                <button id="btn-arch">BS Architecture</button>
+                <button id="btn-intdes">BS Interior Design</button>
+            </div>
+            <div class="info-panel">
+                <div class="side-buttons">
+                    <button id="btn-info">Program Info</button>
+                    <button id="btn-head">Program Head</button>
+                    <button id="btn-faculty">Faculty</button>
+                    <button id="btn-subjects">Subjects</button>
+                    <button id="btn-sections">Sections</button>
+                    <button id="btn-rooms">Rooms</button>
+                </div>
+                <div class="info-placeholder" id="info-placeholder">
+                    Please choose a Program/Course above.
+                </div>
+            </div>
+        </div>        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="footer-title">College of Engineering and Architecture</p>
+            </div>
+            <div class="footer-center">
+                <p>Gov. Feliciano Leviste Road, Lipa City, Philippines</p>
+                <p>Contact: +63 43 706 - 0041</p>
+            </div>
+            <div class="footer-right">
+                <button class="feedback-button">Submit Feedback</button>
+                <p class="footer-email"><a href="mailto:1420489@ub.edu.ph">Email: 1420489@ub.edu.ph</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Update date and time dynamically
+        const updateDateTime = () => {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+            };
+            document.getElementById('date-time').textContent = now.toLocaleString('en-US', options);
+        };
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

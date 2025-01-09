@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/static/css/admin-header-footer.css">
+    <link rel="stylesheet" href="/static/css/about-admin.css">
+</head>
+<body data-page="about">
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo and Title Section -->
+        <div class="logo-title">
+            <img src="/static/images/ublc_logo.png" alt="University Logo" class="logo">
+        </div>
+    
+        <!-- Title in the Center -->
+        <h1 class="header-title">UBian IntelliAsk</h1>
+    
+        <!-- Date-Time and Buttons Section -->
+        <div>
+            <div class="date-time" id="date-time"></div>
+            <div class="info-buttons">
+                <button class="info-button" id="info-button">i</button>
+                <button class="close-button" onclick="location.href='admin.html';">X</button>
+            </div>
+        </div>
+    </header>
+    
+
+    <main>
+        <!-- About the University -->
+        <section class="about-section">
+            <h2>About the University</h2>
+            <img src="/static/images/map-bg.jpg" alt="University Image">
+            <p>
+                Placeholder for information about the University. This section will describe its history, vision, mission, and core values.
+            </p>
+        </section>
+
+        <!-- About the Kiosk System -->
+        <section class="about-section">
+            <h2>About the Kiosk System</h2>
+            <img src="/static/images/intelliask-logo.png" alt="Kiosk Image">
+            <p>
+                Placeholder for information about the kiosk system, its purpose, and its features.
+            </p>
+        </section>
+
+        <!-- How to Use the Kiosk -->
+        <section class="about-section">
+            <h2>How to Use the Kiosk</h2>
+            <img src="/static/images/question-mark.jpg" alt="How to Use Image">
+            <p>
+                Placeholder for step-by-step instructions on how to use the kiosk efficiently.
+            </p>
+        </section>
+
+        <section class="contact-section">
+            <!-- Contact Form Panel -->
+            <div class="contact-panel">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        
+            <!-- Map Panel -->
+            <div class="map-panel">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d967.9550256154957!2d121.1591983100167!3d13.969311266834156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd13576170055f%3A0x386542f8659f0cf!2sX595%2BMQ6%2C%20Lipa%2C%20Batangas!5e0!3m2!1sen!2sph!4v1736333534367!5m2!1sen!2sph"
+                    allowfullscreen=""
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </section>        
+
+        <!-- Feedback and Recommendation -->
+        <section class="feedback-section">
+            <h2>Feedback and Recommendation</h2>
+            <form class="feedback-form">
+                <label for="feedback-type">Choose Feedback Type:</label>
+                <select id="feedback-type">
+                    <option value="overall">Overall</option>
+                    <option value="updates">Updates</option>
+                    <option value="maps">Maps</option>
+                    <option value="programs">Programs</option>
+                    <option value="intelliask">IntelliAsk</option>
+                </select>
+
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="1">1 (Lowest)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10 (Highest)</option>
+                </select>
+
+                <textarea placeholder="Your Feedback or Recommendation" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="footer-title">College of Engineering and Architecture</p>
+            </div>
+            <div class="footer-center">
+                <p>Gov. Feliciano Leviste Road, Lipa City, Philippines</p>
+                <p>Contact: +63 43 706 - 0041</p>
+            </div>
+            <div class="footer-right">
+                <button class="feedback-button">Submit Feedback</button>
+                <p class="footer-email"><a href="mailto:1420489@ub.edu.ph">Email: 1420489@ub.edu.ph</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Update date and time dynamically
+        const updateDateTime = () => {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+            };
+            document.getElementById('date-time').textContent = now.toLocaleString('en-US', options);
+        };
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

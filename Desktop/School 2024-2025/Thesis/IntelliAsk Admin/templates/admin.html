@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBian IntelliAsk Admin Control Panel</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-title">
+            <img src="/static/images/ublc_logo.png" alt="University Logo" class="logo">
+        </div>
+        <h1 class="header-title">UBian IntelliAsk Admin Control Panel</h1>
+        <div class="date-time" id="date-time"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="left-section">
+            <a href="updates-admin.html" class="panel-link">
+                <div class="panel" id="updates">
+                    <h2>Updates</h2>
+                    <p>Manages latest updates and events</p>
+                </div>
+            </a>
+            <a href="map-admin.html" class="panel-link">
+                <div class="panel" id="map">
+                    <h2>Map</h2>
+                    <p>Manages the Interactive 2D Map of the Campus</p>
+                </div>
+            </a>
+            <a href="programs-admin.html" class="panel-link">
+                <div class="panel" id="programs">
+                    <h2>Programs</h2>
+                    <p>Manages the Academic Programs</p>
+                </div>
+            </a>
+            <a href="about-admin.html" class="panel-link">
+                <div class="panel" id="about">
+                    <h2>About</h2>
+                    <p>Manages the About page</p>
+                </div>
+            </a>
+        </div>        
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div id="chatbot-history">
+                <h2>Chatbot History</h2>
+                <div class="chatbox chatbot-history">
+                    <ul class="message-history">
+                        <li><strong>User:</strong> What are the available programs?<br><strong>Response:</strong> Here are the programs offered...</li>
+                        <li><strong>User:</strong> Who is the dean of engineering?<br><strong>Response:</strong> The dean is...</li>
+                    </ul>
+                </div>
+                <div class="chat-input-form">
+                    <button class="chat-send" onclick="previousPage()">Previous</button>
+                    <button class="chat-send" onclick="nextPage()">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            College of Engineering and Architecture
+        </div>
+        <div class="footer-center">
+            <p>&copy; 2025 UBian IntelliAsk. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <button class="feedback-button">Submit Feedback</button>
+            <p class="footer-email"><a href="mailto:1420489@ub.edu.ph">Email: 1420489@ub.edu.ph</a></p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        const updateDateTime = () => {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            document.getElementById('date-time').textContent = now.toLocaleString('en-US', options);
+        };
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>

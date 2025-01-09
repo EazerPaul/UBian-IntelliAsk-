@@ -1,0 +1,159 @@
+/* Section Styling */
+.about-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    color: #800000;
+    margin-bottom: 1rem;
+}
+
+.about-section img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.about-section img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.about-section p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Contact Us Section */
+.contact-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    display: flex; /* Ensure side-by-side layout */
+    flex-wrap: nowrap; /* Keep panels in a single row */
+    gap: 20px; /* Space between panels */
+}
+
+.contact-panel {
+    flex: 1; /* Equal division for both sections */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-panel h2 {
+    font-size: 1.8rem;
+    color: #800000;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form input[type="email"] {
+    width: 97%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    width: 97%;
+    height: 120px; /* Adjust height */
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #a00000;
+}
+
+.map-panel {
+    flex: 1; /* Equal division for the map */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto; /* Allow the map to adjust height */
+}
+
+.map-panel iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Feedback Section */
+.feedback-section {
+    padding: 2rem;
+    background-color: #800000; /* Maroon Background */
+    border-radius: 10px;
+    color: white;
+    margin-top: 1rem;
+}
+
+.feedback-section h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.feedback-form textarea {
+    height: 120px; /* Same as Contact Us */
+}
+
+.feedback-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #FFC107;
+}
+

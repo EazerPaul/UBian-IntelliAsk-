@@ -1,0 +1,294 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #800000;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #800000;
+    color: white;
+}
+
+/* Logo Styling */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Spacing between logo and title */
+}
+
+.logo {
+    height: 75px;
+}
+
+
+/* Title Styling */
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f9f9f9;
+    margin: 0;
+}
+
+/* Date-Time Styles */
+.date-time {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.left-section {
+    flex: 2;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /* Two rows of equal height */
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 1rem;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+/* Fix Clickable Area for Panels */
+.panel-link {
+    display: block;
+    width: 90%; /* Match the panel size */
+    height: 80%; /* Match the panel size */
+    text-decoration: none;
+}
+
+/* Panels */
+.panel {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Ensure panel occupies the full grid cell */
+    width: 100%; /* Ensure panel occupies the full grid cell */
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.panel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Debugging Grid Space */
+.left-section > * {
+    border: 1px solid transparent; /* Add if debugging; remove after fixing */
+}
+
+/* Panel Overlay */
+.panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Title Styling (h2) */
+.panel h2 {
+    color: #E6B800; /* Slightly darker gold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Optional shadow */
+    font-size: 1.5rem; /* Adjust as needed */
+    position: relative;
+    z-index: 2; /* Ensure it's above overlay */
+    margin: 0;
+}
+
+/* Description Styling (p) */
+.panel p {
+    color: rgba(255, 255, 255, 0.75); /* White with 75% opacity */
+    font-size: 1rem; /* Slightly smaller */
+    position: relative;
+    z-index: 2; /* Ensure it's above overlay */
+    margin: 0.5rem 0 0; /* Add spacing below the title */
+}
+
+/* Background Images for Panels */
+#updates {
+    background-image: url('/static/images/updates-bg.jpg');
+}
+
+#map {
+    background-image: url('/static/images/map-bg.jpg');
+}
+
+#programs {
+    background-image: url('/static/images/programs-bg.jpg');
+}
+
+#about {
+    background-image: url('/static/images/about-bg.jpg');
+}
+
+
+/* Chatbot History Panel */
+#chatbot-history {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: calc(100% - 20px);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chatbot-history {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.chat-input-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.chat-input-form button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.chat-input-form button:hover {
+    background-color: #a00000;
+}
+
+.message-history li {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+    background-color: #800000;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footer-left {
+    flex: 1;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.footer-center {
+    flex: 1;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 0.5;
+}
+
+.footer-right {
+    flex: 1;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: right;
+    display: flex;
+    line-height: 0.5;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.feedback-button {
+    background-color: #FFD700;
+    border: none;
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-button:hover {
+    background-color: #FFC107;
+}
+
+.footer-email a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-email a:hover {
+    text-decoration: underline;
+}
+
+/* Fix Blank Space Below Footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates Admin</title>
+    <link rel="stylesheet" href="/static/css/updates-admin.css">
+    <link rel="stylesheet" href="/static/css/admin-header-footer.css">
+</head>
+<body data-page="updates">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-title">
+            <img src="/static/images/ublc_logo.png" alt="University Logo" class="logo">
+        </div>
+        <h1 class="header-title">UBian IntelliAsk Admin Control Panel</h1>
+        <div class="date-time" id="date-time"></div>
+        <div class="info-buttons">
+            <button class="info-button" id="info-button">i</button>
+            <button class="close-button" onclick="location.href='admin.html';">X</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- News Section -->
+        <div class="section-news">
+            <div class="section-buttons">
+                <button id="add-news" class="action-button">Add News</button>
+                <button id="edit-news" class="action-button">Edit</button>
+                <button id="delete-news" class="action-button">Delete</button>
+            </div>
+            <div id="news-container" class="updates-panel">
+                <h2>News</h2>
+                <div class="news-content"></div>
+            </div>
+        </div>
+
+        <!-- Events Section -->
+        <div class="section-events">
+            <div class="section-buttons">
+                <button id="add-events" class="action-button">Add Event</button>
+                <button id="edit-events" class="action-button">Edit</button>
+                <button id="delete-events" class="action-button">Delete</button>
+            </div>
+            <div id="events-container" class="updates-panel">
+                <h2>Events</h2>
+                <div class="events-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p>College of Engineering and Architecture</p>
+        </div>
+        <div class="footer-center">
+            <p>© 2025 UBian IntelliAsk. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <button class="feedback-button">Submit Feedback</button>
+            <p class="footer-email"><a href="mailto:1420489@ub.edu.ph">Email: 1420489@ub.edu.ph</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const updateDateTime = () => {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+            };
+            document.getElementById('date-time').textContent = now.toLocaleString('en-US', options);
+        };
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/updates-admin.js"></script>
+</body>
+</html>
